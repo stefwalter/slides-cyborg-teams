@@ -5,8 +5,14 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
 <link rel="stylesheet" href="pikestreet.css">
-<script src="node_modules/reveal.js/lib/js/head.min.js"></script>
 <title>Training machines to be Open Source Contributors</title>
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'node_modules/reveal.js/css/print/pdf.css' : 'node_modules/reveal.js/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild( link );
+</script>
 </head>
 <body>
 
@@ -695,6 +701,7 @@
 </div>
 </div>
 
+<script src="node_modules/reveal.js/lib/js/head.min.js"></script>
 <script src="node_modules/reveal.js/js/reveal.js"></script>
 <script src="slides.js"></script>
 

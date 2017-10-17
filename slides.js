@@ -19,4 +19,7 @@ Reveal.initialize({
 	maxScale: 1.5,
 
     transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+    pdfMaxPagesPerSlide: 1,
 });
+
