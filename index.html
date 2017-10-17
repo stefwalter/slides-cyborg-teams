@@ -251,7 +251,7 @@
         <!-- TODO: Layout -->
         <table class="reasons">
             <thead>
-                <th>5+ branches and architectures</th>
+                <th>5+ maintained branches</th>
             </thead>
             <tbody>
                 <tr>
@@ -313,40 +313,6 @@
         <p class="comment">Machines as team members</p>
     </section>
 
-    <section>
-        <!-- TODO: Fix the fragment display -->
-        <!-- TODO: Smaller -->
-        <ul class="reasons fa-ul">
-            <li class="fragment grow">
-                <i class="fa-li fa fa-code-fork"></i>
-                <span>Commit history</span>
-            </li>
-            <li class="fragment grow">
-                <i class="fa-li fa fa-repeat"></i>
-                <span>Owning mundane work</span>
-            </li>
-            <li class="fragment grow">
-                <i class="fa-li fa fa-magic"></i>
-                <span>Pair programming with bots</span>
-            </li>
-            <li class="fragment grow">
-                <i class="fa-li fa fa-android"></i>
-                <span>Machine learning</span>
-            </li>
-            <li class="fragment grow">
-                <i class="fa-li fa fa-ship"></i>
-                <span>Bots ship Cockpit</span>
-            </li>
-            <li class="fragment grow">
-                <i class="fa-li fa fa-meh-o"></i>
-                <span>Team stops without them
-            </li>
-        </ul>
-        <aside class="notes">
-            <p>How the machines act</p>
-        </aside>
-    </section>
-
     <section data-background-color="#000"
 	    data-background-image="images/photo-6170.jpg!d-public-domain.jpg">
         <aside class="notes">
@@ -357,6 +323,44 @@
             <p>When you look at a bot's internal guts, all you see is shell scripts
             REST calls, and various other tools, but when you take a step back, you
             see it how it acts, a team member.</p>
+        </aside>
+    </section>
+
+    <section>
+        <!-- TODO: Fix the fragment display -->
+        <!-- TODO: Smaller -->
+        <ul class="reasons fa-ul">
+            <li class="fragment grow">
+                <i class="fa-li fa fa-repeat"></i>
+                <span>Bots own <strong>mundane work</strong></span>
+            </li>
+            <li class="fragment grow">
+                <i class="fa-li fa fa-magic"></i>
+                <span>Pair programming with bots</span>
+            </li>
+            <li class="fragment grow">
+                <i class="fa-li fa fa-user"></i>
+                <span>Humans train the bots</span>
+            </li>
+            <li class="fragment grow">
+                <i class="fa-li fa fa-android"></i>
+                <span>Bots learn from humans</span>
+            </li>
+            <li class="fragment grow">
+                <i class="fa-li fa fa-ship"></i>
+                <span>Bots ship Cockpit</span>
+            </li>
+            <li class="fragment grow">
+                <i class="fa-li fa fa-code-fork"></i>
+                <span>Bots as committers</span>
+            </li>
+            <li class="fragment grow">
+                <i class="fa-li fa fa-meh-o"></i>
+                <span>Team stops without bots
+            </li>
+        </ul>
+        <aside class="notes">
+            <p>How the machines act</p>
         </aside>
     </section>
 
@@ -382,11 +386,26 @@ $ git shortlog -ns | head -n10 | cut -c8-30 | nl
         <!-- TODO: Fill in stats here -->
         500,000 tests per month
         * Testing the code tens of thousands of times a day.
+	or Explain a full flow issue -> pull request ->
+	* highlight that no manual step is involved,
+	* In the "open source manner" plug existing pieces together
+	* Maybe highlight that any step can be taken over by a human if necessary
+	* "Christmas"
     </section>
 
     <section>
         <img class="border" src="images/cc-mendhak-flikr-3229053685_097ca85dfb_o.jpg">
         <p>Pair Programming</p>
+    </section>
+
+    <section>
+	Bots ship Cockpit
+        <aside class="notes">
+            * Sign a tag, bots do what needs to be done
+            * Would take two days to do otherwise
+            * Talk about how this is less than 2 hours
+            * List all the places again
+        </aside>
     </section>
 
     <section>
@@ -431,6 +450,11 @@ $ git shortlog --summary -- bots/ test/ | sort -nr
     <section>
         Criteria: Bots learning from humans
         <!-- TODO: Screenshot here of learning whether a flake or not -->
+        <aside class="notes">
+            * Describe how human activity in project has patterns, and machines are starting
+              to identify them and learn from them.
+            * More on this toward the end of talk.
+        </aside>
     </section>
 
     <section>
@@ -465,17 +489,27 @@ $ git shortlog --summary -- bots/ test/ | sort -nr
     <section>
         <!-- TODO: Show task list -->
         * Organic and distributed
+        <aside class="notes">
+            <!-- TODO: Show .tasks file -->
+            * xxx yada yada
+            * Bots on my laptop
+            * Communication is key as with any team.
+            * Bring in open source angle here.
+            * Doesn't matter where they run
+            * Use containers
+        </aside>
     </section>
 
     <section>
         <!-- TODO: Fill in slide -->
         * Self validation
+        <aside class="notes">
+        </aside>
     </section>
 
     <section>
         <!-- TODO: Fill in slide -->
         * Self aware
-
         <pre>
             kvm = os.access("/dev/kvm", os.R_OK | os.W_OK)
 
@@ -485,16 +519,10 @@ $ git shortlog --summary -- bots/ test/ | sort -nr
             except IOError:
                 redhat = False
         </pre>
-    </section>
-
-    <section>
-        <!-- TODO: Video rendering of Cockpit kubernetes -->
-        * Use containers
-    </section>
-
-    <section>
-        <!-- TODO: curl command accessing the state of other bots -->
-        * Bot gossip
+        <aside class="notes">
+            <!-- TODO Show graphic wit hlines and verify machines -->
+            * Not quite true that it doesn't matter where the yrun
+        </aside>
     </section>
 
     <section>
@@ -507,7 +535,7 @@ $ git shortlog --summary -- bots/ test/ | sort -nr
 
     <section>
         <!-- TODO: Fill in slide -->
-        * Don't rework process
+        * Don't rework process (yet)
         <aside class="notes">
         Technique: Don't rework your broken process, automate it
         </aside>
