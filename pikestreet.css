@@ -63,6 +63,7 @@ ul.reasons li i {
     color: white;
 }
 
+html.title body,
 html.divider body {
     background-image: url("node_modules/Reveal-PikeStreet/assets/patternbg.png");
     background-repeat: repeat;

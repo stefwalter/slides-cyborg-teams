@@ -91,3 +91,33 @@ ul.reasons li.fragment.visible span {
     font-size: 2em;
 }
 
+p.reasons i {
+    font-size: 2em;
+    position: relative;
+    top: 15px;
+    padding-right: 0.5em;
+}
+
+.reveal .redhat-logo {
+    position: absolute;
+    display: none;
+    bottom: 50px;
+    left: 50px;
+    height: 80px;
+    width: 80px;
+    background-image: url('images/redhat.png');
+    background-position: 50% 50%;
+    background-size: cover;
+    z-index: 2;
+}
+
+html.title .reveal .redhat-logo {
+    display: block;
+}
+
+.reveal .credits {
+    margin-top: 2em;
+    text-align: left;
+    font-size: 0.75em;
+    font-weight: bold;
+}

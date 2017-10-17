@@ -18,10 +18,5 @@ Reveal.initialize({
 	minScale: 0.2,
 	maxScale: 1.5,
 
-    keyboard: {
-        40: 'right',
-        38: 'left'
-    },
-
     transition: 'slide', // none/fade/slide/convex/concave/zoom
 });
