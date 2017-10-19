@@ -106,6 +106,9 @@
         </section>
     </section>
 
+    <section data-background-image="avatars/layout.png">
+    </section>
+
     <section>
         <section data-state="complex">
             <table class="reasons">
@@ -372,10 +375,41 @@
     </section>
 
     <section>
-        <p class="reasons">
-            <i class="fa fa-repeat"></i>
-            <span>Bots own <strong>mundane work</strong></span>
-        </p>
+        <section>
+            <p class="reasons">
+                <i class="fa fa-repeat"></i>
+                <span>Bots own <strong>mundane work</strong></span>
+            </p>
+        </section>
+
+        <section>
+            <img src="images/f1-issue-filed.png">
+        </section>
+
+        <section>
+            <img src="images/f2-issue-wip.png">
+        </section>
+
+        <section>
+<pre><code>$ make po/cockpit.pot
+$ make upload-pot
+$ make download-po
+$ git add po/
+$ git checkout -b po-refresh-xxx
+$ git commit -m "po: Update from Fedora Zanata"
+$ git push cockpitous po-refresh-xxx
+</code></pre>
+        </section>
+
+        <section>
+            <img src="images/f3-pull-request.png">
+        </section>
+
+        <section>
+            <img src="images/f4-testing.png">
+        </section>
+
+        <aside class="notes">
         <!-- TODO: Fill in stats here 
         500,000 tests per month
         * Testing the code tens of thousands of times a day.
@@ -385,6 +419,7 @@
 	* Maybe highlight that any step can be taken over by a human if necessary
 	* "Christmas"
         -->
+        </aside>
     </section>
 
     <section>
@@ -592,10 +627,12 @@
     </section>
 
     <section>
-        <p class="reasons">
-            <i class="fa fa-check-circle-o"></i>
-            <span>Self validating bots</span>
-        </p>
+        <section>
+            <p class="reasons">
+                <i class="fa fa-check-circle-o"></i>
+                <span>Self validating bots</span>
+            </p>
+        </section>
     </section>
 
     <section>
