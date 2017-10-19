@@ -1,4 +1,5 @@
 *.sw?
 *.tmp
 ~*
+/*.pdf
 /node_modules/
