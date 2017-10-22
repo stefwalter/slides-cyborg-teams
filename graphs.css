@@ -1,0 +1,45 @@
+path {
+    stroke: white;
+    stroke-width: 3;
+    fill: none;
+}
+
+path.vms,
+path.duration {
+    stroke: #e7ad52;
+}
+
+path.domain {
+    opacity: 0.5;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: white;
+    stroke-width: 2;
+    shape-rendering: crispEdges;
+}
+
+div.graph {
+    font: 20px Open Sans;
+}
+
+g.tick text {
+    fill: white;
+    font: 20px Open Sans;
+}
+
+g.legend {
+    font: 30px Open Sans;
+}
+
+rect.legend-box {
+    stroke: none;
+    fill: none;
+    padding: 10px;
+}
+
+g.legend-items text {
+    fill: white;
+}

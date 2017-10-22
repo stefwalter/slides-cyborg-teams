@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "Reveal-PikeStreet": "git+https://git@github.com/felixrieseberg/Reveal-PikeStreet.git",
+    "d3": "^3.5.5",
     "font-awesome": "~4.7.0",
     "reveal.js": "~3.5.0",
     "typeface-montserrat": "0.0.37",

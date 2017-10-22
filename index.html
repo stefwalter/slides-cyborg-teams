@@ -5,6 +5,7 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
 <link rel="stylesheet" href="pikestreet.css">
+<link rel="stylesheet" href="graphs.css">
 <title>Training machines to be Open Source Contributors</title>
 <script>
     var link = document.createElement('link');
@@ -88,21 +89,24 @@
         </aside>
     </section>
 
-    <section data-state="clear" data-transition="fade-in fade-out"
-        data-background-repeat="no-repeat" data-background-position="center"
-        data-background="#fff" data-background-image="images/cockpit-system.png">
-    </section>
-
-    <section data-state="clear" data-transition="fade-in fade-out"
-        data-background-repeat="no-repeat" data-background-position="center"
-        data-background="#fff" data-background-image="images/cockpit-topology.png">
-    </section>
-
     <section>
-        <section data-state="clear" data-background-video="video/spawn-process.webm">
+
+        <section data-state="clear" data-transition="fade-in fade-out"
+            data-background-repeat="no-repeat" data-background-position="center"
+            data-background="#fff" data-background-image="images/cockpit-system.png">
         </section>
 
-        <section data-state="clear" data-background-video="video/dbus-proxy.webm">
+        <section data-state="clear" data-transition="fade-in fade-out"
+            data-background-repeat="no-repeat" data-background-position="center"
+            data-background="#fff" data-background-image="images/cockpit-topology.png">
+        </section>
+
+        <section data-state="clear" data-background-video="video/spawn-process.webm"
+            data-background-size="contain">
+        </section>
+
+        <section data-state="clear" data-background-video="video/dbus-proxy.webm"
+            data-background-size="contain">
         </section>
     </section>
 
@@ -409,6 +413,12 @@ $ git push cockpitous po-refresh-xxx
             <img src="images/f4-testing.png">
         </section>
 
+        <section>
+            <div class="graph" id="september-tests-and-vms-1"></div>
+            <p>Tests: <strong>443,040</strong> &nbsp; &nbsp; &nbsp;
+                <span class="comment">VMs: <strong>558,413</strong></span></p>
+        </section>
+
         <aside class="notes">
         <!-- TODO: Fill in stats here 
         500,000 tests per month
@@ -471,7 +481,7 @@ $ git push cockpitous po-refresh-xxx
             </p>
         </section>
         <section>
-            <img src="images/BenderBot_slow.gif">
+            <img src="images/BenderBot_slow.gif" width="600px">
         </section>
         <section>
             <img src="images/wikipedia-public-domain-Neural_network_bottleneck_achitecture.svg">
@@ -744,7 +754,10 @@ $ git push cockpitous po-refresh-xxx
 
 <script src="node_modules/reveal.js/lib/js/head.min.js"></script>
 <script src="node_modules/reveal.js/js/reveal.js"></script>
+<script src="node_modules/d3/d3.js"></script>
 <script src="slides.js"></script>
+<script src="graphs.js"></script>
+<script src="september-tests-and-vms.jsonp"></script>
 
 </body>
 </html>
