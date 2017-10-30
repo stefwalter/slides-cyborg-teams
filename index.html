@@ -27,8 +27,8 @@
         <h1>Training Machines</h1>
         <h2>to be Open Source Contributors</h2>
         <br>
-        <p><strong>Stef Walter</strong><br>
-        Red Hat</p>
+        <h3 style="font-weight: normal;"><strong>Stef Walter</strong></h3>
+        <p>OS Architecture Lead, Red Hat</p>
     </section>
 
     <section>
@@ -565,7 +565,7 @@ $ git push cockpitous po-refresh-xxx
 
     <section style="text-align: left;">
         <!-- TODO Bring in the open source angle -->
-        <h1 class="comment">Laws of Cyborg Teams</h1>
+        <h2 class="comment">Laws of Cyborg Teams</h2>
         <ol class="listing">
             <li class="fragment">Teaching a machine must be<br>as easy as teaching a human</li>
             <li class="fragment">Machines must produce feedback<br>into the team's workflow</li>
@@ -586,22 +586,6 @@ $ git push cockpitous po-refresh-xxx
     <section>
         <ul class="reasons fa-ul">
             <li>
-                <i class="fa-li fa fa-repeat"></i>
-                <span>Organic and distributed bots</strong></span>
-            </li>
-            <li>
-                <i class="fa-li fa fa-check-circle-o"></i>
-                <span>Self validating bots</span>
-            </li>
-            <li>
-                <i class="fa-li fa fa-grav"></i>
-                <span>Self aware bots</span>
-            </li>
-            <li>
-                <i class="fa-li fa fa-archive"></i>
-                <span>Containerize your bots, yo!</span>
-            </li>
-            <li>
                 <i class="fa-li fa fa-chain-broken"></i>
                 <span>Don't assume bots can't</span>
             </li>
@@ -609,7 +593,66 @@ $ git push cockpitous po-refresh-xxx
                 <i class="fa-li fa fa-recycle"></i>
                 <span>Don't rework process (yet)</span>
             </li>
+            <li>
+                <i class="fa-li fa fa-archive"></i>
+                <span>Containerize your bots, yo!</span>
+            </li>
+            <li>
+                <i class="fa-li fa fa-repeat"></i>
+                <span>Organic and distributed bots</strong></span>
+            </li>
+            <li>
+                <i class="fa-li fa fa-check-circle-o"></i>
+                <span>Self-validating and self-aware bots</span>
+            </li>
+            <li>
+                <i class="fa-li fa fa-cogs"></i>
+                <span>Collision Avoidance and Detection</span>
+            </li>
+            <li>
+                <i class="fa-li fa fa-cutlery"></i>
+                <span>Test flakes are food not poison</span>
+            </li>
         </ul>
+    </section>
+
+    <section>
+        <p class="reasons">
+            <i class="fa fa-chain-broken"></i>
+            <span>Don't assume bots can't</span>
+        </p>
+        <aside class="notes">
+            It is comparatively easy to make computers exhibit adult level performance on intelligence tests or playing checkers, and difficult or impossible to give them the skills of a one-year-old when it comes to perception and mobility.
+        </aside>
+    </section>
+
+    <section>
+        <p class="reasons">
+            <i class="fa fa-recycle"></i>
+            <span>Don't rework process (yet)</span>
+        </p>
+        <aside class="notes">
+        Technique: Don't rework your broken process, automate it
+        </aside>
+    </section>
+
+    <section>
+        <section>
+            <p class="reasons">
+                <i class="fa fa-archive"></i>
+                <span>Containerize your bots, yo!</span>
+            </p>
+        </section>
+
+	<section data-background="images/yo-dawg.png" data-background-position="bottom right"
+		data-background-size='10em'>
+            <!-- TODO: Lay this slide out -->
+            Testing <strong>containers</strong><br>
+            in <strong>Virtual Machines</strong><br>
+            in <strong>container</strong> bots<br>
+            running on <strong>virtual machines</strong><br>
+            <strong class="fragment">on turtles</strong><br>
+        </section>
     </section>
 
 
@@ -642,29 +685,74 @@ $ git push cockpitous po-refresh-xxx
     <section>
         <section>
             <p class="reasons">
-                <i class="fa fa-check-circle-o"></i>
-                <span>Self validating bots</span>
+                <i class="fa fa-cogs"></i>
+                <span>Collision avoidance and detection</span>
             </p>
+        </section>
+
+        <section>
+<pre><code># Scan for all tests
+bots/tests-scan
+
+# File issues for these tasks
+bots/po-trigger
+bots/image-trigger
+bots/npm-trigger
+bots/naughty-trigger
+
+# Any tasks related to issues
+bots/issue-scan</code></pre>
+        </section>
+
+        <section>
+<pre><code>PRIORITY=0009 bots/image-refresh --issue='7950' debian-testing
+PRIORITY=0009 bots/image-refresh --issue='7949' rhel-7-4
+PRIORITY=0009 bots/image-refresh --issue='7948' ubuntu-1604
+<strong>PRIORITY=0006 TEST_NAME='rhel-7.4-20171024-112020' TEST_REVISION='c9a5bec1d40f881abc011b05dbbe281f32a2c966' bots/tests-invoke 'verify/fedora-i386' 'rhel-7.4'</strong>
+PRIORITY=0006 TEST_NAME='rhel-7.4-20171024-112020' TEST_REVISION='c9a5bec1d40f881abc011b05dbbe281f32a2c966' bots/tests-invoke 'verify/fedora-atomic' 'rhel-7.4'
+PRIORITY=0006 TEST_NAME='rhel-7.4-20171024-112020' TEST_REVISION='c9a5bec1d40f881abc011b05dbbe281f32a2c966' bots/tests-invoke 'verify/centos-7' 'rhel-7.4'
+PRIORITY=0006 TEST_NAME='rhel-7.4-20171024-112020' TEST_REVISION='c9a5bec1d40f881abc011b05dbbe281f32a2c966' bots/tests-invoke 'container/kubernetes' 'rhel-7.4'
+PRIORITY=0005 TEST_NAME='rhel-7.4-20171024-112020' TEST_REVISION='c9a5bec1d40f881abc011b05dbbe281f32a2c966' bots/tests-invoke 'selenium/chrome'
+PRIORITY=0000 touch /tmp/cockpit-image-prune.stamp && bots/image-prune
+...</code></pre>
+        </section>
+
+        <section>
+<pre><code>
+  GEN      dist/ostree/Makefile.deps
+  GEN      dist/networkmanager/Makefile.deps
+  GEN      dist/machines/Makefile.deps
+  GEN      dist/kubernetes/Makefile.deps
+  GEN      dist/kdump/Makefile.deps
+  GEN      dist/docker/Makefile.deps
+  GEN      dist/dashboard/Makefile.deps
+  GEN      dist/apps/Makefile.deps
+<strong>Expecting "WIP: cockpit-tasks-3991c: Update translations from Fedora Zanata" but saw "WIP: cockpit-tasks-xpg09: Update translations from Fedora Zanata"
+State not as expected. Possible collision. Aborting.</strong>
+</code></pre>
         </section>
     </section>
 
     <section>
         <section>
-            <!-- TODO: Collision detection and avoidance -->
             <p class="reasons">
-                <i class="fa fa-grav"></i>
-                <span>Self aware bots</span>
+                <i class="fa fa-check-circle-o"></i>
+                <span>Self-validating self-aware bots</span>
             </p>
+        </section>
+
+        <section>
+            <p>Make your bots try out changes to the bots</p>
         </section>
 
         <section>
     <pre><code>    kvm = os.access("/dev/kvm", os.R_OK | os.W_OK)
 
-        try:
-            urllib.urlopen(REDHAT_PING).read()
-            redhat = os.path.exists(os.path.expanduser(REDHAT_CREDS))
-        except IOError:
-            redhat = False
+    try:
+        urllib.urlopen(REDHAT_PING).read()
+        redhat = os.path.exists(os.path.expanduser(REDHAT_CREDS))
+    except IOError:
+        redhat = False
     </code></pre>
             <aside class="notes">
                 * Not quite true that it doesn't matter where the yrun
@@ -675,48 +763,11 @@ $ git push cockpitous po-refresh-xxx
     <section>
         <section>
             <p class="reasons">
-                <i class="fa fa-archive"></i>
-                <span>Containerize your bots, yo!</span>
+                <i class="fa fa-cutlery"></i>
+                <span>Test flakes are food not poison</span>
             </p>
         </section>
 
-	<section data-background="images/yo-dawg.png" data-background-position="bottom right"
-		data-background-size='10em'>
-            <!-- TODO: Lay this slide out -->
-            Testing <strong>containers</strong><br>
-            in <strong>Virtual Machines</strong><br>
-            in <strong>container</strong> bots<br>
-            running on <strong>virtual machines</strong><br>
-            <strong class="fragment">on turtles</strong><br>
-        </section>
-    </section>
-
-    <section>
-        <p class="reasons">
-            <i class="fa fa-chain-broken"></i>
-            <span>Don't assume bots can't</span>
-        </p>
-        <aside class="notes">
-            It is comparatively easy to make computers exhibit adult level performance on intelligence tests or playing checkers, and difficult or impossible to give them the skills of a one-year-old when it comes to perception and mobility.
-        </aside>
-    </section>
-
-    <section>
-        <p class="reasons">
-            <i class="fa fa-recycle"></i>
-            <span>Don't rework process (yet)</span>
-        </p>
-        <aside class="notes">
-        Technique: Don't rework your broken process, automate it
-        </aside>
-    </section>
-
-    <section data-state="divider">
-        <h1 class="alt">Test flakes</h1>
-        <p class="comment">Food not poison</p>
-    </section>
-
-    <section>
         <section>
             <h2>Flakes are just mutations</h2>
         </section>
