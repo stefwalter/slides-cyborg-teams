@@ -24,15 +24,11 @@
 <div class="slides">
 
     <section data-state="title">
-        <h1>Training Machines</h1>
-        <h2>to be Open Source Contributors</h2>
+        <h1>Cyborg Teams</h1>
+        <h2 class="comment">Training Machines to be Contributors</h2>
         <br>
         <h3 style="font-weight: normal;"><strong>Stef Walter</strong></h3>
-        <p>OS Architecture Lead, Red Hat</p>
-    </section>
-
-    <section>
-        <h1>Cyborg Teams</h1>
+        <p>Red Hat</p>
         <aside class="notes">
             Hi my name is Stef. I'm not a Cyborg but I work on a Cyborg Team.
             This isn't hyperbole or sci-fi.
@@ -75,6 +71,11 @@
         <aside class="notes">
             This is the low hanging fruit.
         </aside>
+    </section>
+
+    <section>
+        <h1>We speak "machine"!</h1>
+        <p class="comment">This is why its a low hanging fruit</p>
     </section>
 
     <section data-state="divider">
@@ -273,13 +274,13 @@
                     <tr>
                         <td>master</td>
                     </tr><tr>
-                        <td>rhel-7.4</td>
+                        <td>rhel-7.5</td>
                     </tr><tr>
-                        <td>rhel-7.3.x</td>
+                        <td>rhel-7.4</td>
                     </tr><tr>
                         <td>i386</td>
                     </tr><tr>
-                        <td>s390x</td>
+                        <td>ppc64</td>
                     </tr>
                 </tbody>
             </table>
@@ -419,6 +420,14 @@ $ git push cockpitous po-refresh-xxx
                 <span class="comment">VMs: <strong>558,413</strong></span></p>
         </section>
 
+        <section>
+<pre><code>$ <strong>zcat tests-train-1.jsonl.gz | wc</strong>
+  867590 67669917 1317326557
+$ <strong>zgrep -f '"failure"' tests-train-1.jsonl.gz | wc</strong>
+   12407 2142463 86009034
+</code></pre>
+        </section>
+
         <aside class="notes">
         <!-- TODO: Fill in stats here 
         500,000 tests per month
@@ -456,19 +465,19 @@ $ git push cockpitous po-refresh-xxx
         </section>
 
         <section>
-<pre><code>$ <strong>git shortlog --summary -- bots/ test/ | sort -nr</strong>
-  1140	Stef Walter
-   707	Marius Vollmer
-   278	Dominik Perpeet
-   239	Peter Volpe
-   214	Martin Pitt
-    32	Jan Scotka
-    13	Lars Karlitski
-    12	Subin M
-    10	Marek Libra
-     6	Andreas Nilsson
-     5	Matej Marusak
-     4	Stephen Gallagher
+<pre><code>$ <strong>git shortlog --summary -- bots/ test/</strong>
+  Marius Vollmer
+  Dominik Perpeet
+  Peter Volpe
+  Stef Walter
+  Martin Pitt
+  Jan Scotka
+  Lars Karlitski
+  Subin M
+  Marek Libra
+  Andreas Nilsson
+  Matej Marusak
+  Stephen Gallagher
 ...</code></pre>
         </section>
     </section>
@@ -480,11 +489,13 @@ $ git push cockpitous po-refresh-xxx
                 <span>Bots learn from humans</span>
             </p>
         </section>
+
         <section>
             <img src="images/BenderBot_slow.gif" width="600px">
         </section>
+
         <section>
-            <img src="images/wikipedia-public-domain-Neural_network_bottleneck_achitecture.svg">
+            <img src="images/Screenshot-2018-1-27 Cockpit Integration Tests.png" width="1200px">
             <aside class="notes">
                 * Describe how human activity in project has patterns, and machines are starting
                   to identify them and learn from them.
@@ -535,20 +546,8 @@ $ git push cockpitous po-refresh-xxx
         </section>
         <section>
             <img class="border" src="images/github-commit-graph.png">
-        </section>
-
-        <section>
-<pre><code>$ <strong>$ git shortlog -ns | head -n10 | cut -c8-30 | nl</strong>
-     1	Stef Walter
-     2	Marius Vollmer
-     3	Peter Volpe
-     4	Cockpituous
-     5	Dominik Perpeet
-     6	Martin Pitt
-     7	Andreas Nilsson
-     8	Lars Karlitski
-     9	Philip Donlon
-    10	Jan Scotka</code></pre>
+<pre><code>$ <strong>git shortlog -ns | head -n10 | cut -c8-30 | nl | grep Cockpit</strong>
+     4	Cockpituous</code></pre>
         </section>
     </section>
 
@@ -561,6 +560,26 @@ $ git push cockpitous po-refresh-xxx
 
     <section data-state="divider">
         <h1 class="alt">Rules</h1>
+    </section>
+
+    <section>
+        <h2 class="comment">Behavior is driven by two forces</h2>
+        <ol class="listing">
+            <li class="fragment">Driving forces<br>Push you in a specific direction</li>
+            <li class="fragment">Restraining forces<br>Prevent you from going there</li>
+        </ol>
+    </section>
+
+    <section>
+        <strong>
+            <span class="comment">First:</span> Diminish restraining forces<br>
+            <span class="comment">Second:</span> Increase the driving forces
+        </strong>
+        <div style="text-align: right; padding-right: 5em;"><span>&mdash; Kurt Lewin</span></div>
+    </section>
+
+    <section>
+        So <span class="comment">why</span> don't we see Cyborg Teams everywhere?
     </section>
 
     <section style="text-align: left;">
@@ -610,8 +629,8 @@ $ git push cockpitous po-refresh-xxx
                 <span>Collision Avoidance and Detection</span>
             </li>
             <li>
-                <i class="fa-li fa fa-cutlery"></i>
-                <span>Test flakes are food not poison</span>
+                <i class="fa-li fa fa-cutlery comment"></i>
+                <span class="comment">Machine learning: Test flakes are food</span>
             </li>
         </ul>
     </section>
@@ -755,7 +774,7 @@ State not as expected. Possible collision. Aborting.</strong>
         redhat = False
     </code></pre>
             <aside class="notes">
-                * Not quite true that it doesn't matter where the yrun
+                * Not quite true that it doesn't matter where the run
             </aside>
         </section>
     </section>
@@ -764,12 +783,12 @@ State not as expected. Possible collision. Aborting.</strong>
         <section>
             <p class="reasons">
                 <i class="fa fa-cutlery"></i>
-                <span>Test flakes are food not poison</span>
+                <span>Machine learning: Test flakes are food</span>
             </p>
         </section>
 
         <section>
-            <h2>Flakes are just mutations</h2>
+            <h2>Flakes are just fuzzing mutations</h2>
         </section>
 
         <section>
@@ -777,8 +796,150 @@ State not as expected. Possible collision. Aborting.</strong>
         </section>
 
         <section>
-            <img src="images/flake-probability.png" width="1200px">
+            <h2 class="comment">ML techniques in use</h2>
+            <ul>
+                <li>Term Frequency - Inverse Document Frequency</li>
+                <li>Normalized Compression Distance</li>
+                <li>DBSCAN unsupervised clustering</li>
+                <li>K-nearest Neighbors classification</li>
+            </ul>
         </section>
+
+        <section>
+            <img src="images/Screenshot-2018-1-27 Cockpit Integration Tests.png" width="1200px">
+        </section>
+
+        <section>
+            <h2 class="comment">Term Frequency - Inverse Document Frequency</h2>
+<pre><code># ----------------------------------------------------------------------
+# testTeam (check_networking_team.TestNetworking)
+#
+NAME         UUID                                  TYPE            DEVICE 
+System eth0  5fb06bd0-0bb0-7ffb-45f1-d6edd65f3e03  802-3-ethernet  eth0   
+virbr0       82404faf-cb6b-4f4c-8eb6-65fc1a2ff8da  bridge          virbr0 
+System eth1  9c92fad9-6ecb-3e6c-eb4d-8a47c6f50c04  802-3-ethernet  --     
+
+52:54:01:00:00:03 -&gt; eth2
+52:54:01:00:00:03 -&gt; eth2
+52:54:01:00:00:04 -&gt; eth3
+52:54:01:00:00:04 -&gt; eth3
+not ok 139 testTeam (check_networking_team.TestNetworking) duration: 106s
+Traceback (most recent call last):
+  File \"/build/cockpit/bots/../test/verify/check-networking-team\", line 81, in testTeam
+    b.wait_present(\"#network-interface-slaves tr[data-interface='%s']\" % iface1)
+  File \"/build/cockpit/test/common/testlib.py\", line 230, in wait_present
+    return self.wait_js_func('ph_is_present', selector)
+  File \"/build/cockpit/test/common/testlib.py\", line 224, in wait_js_func
+    return self.phantom.wait(\"%s(%s)\" % (func, ','.join(map(jsquote, args))))
+  File \"/build/cockpit/test/common/testlib.py\", line 821, in <lambda>
+    return lambda *args: self._invoke(name, *args)
+  File \"/build/cockpit/test/common/testlib.py\", line 847, in _invoke
+    raise Error(res['error'])
+Error: timeout
+
+Wrote TestNetworking-testTeam-rhel-7-127.0.0.2-2601-FAIL.png
+Wrote TestNetworking-testTeam-rhel-7-127.0.0.2-2601-FAIL.html
+Journal extracted to TestNetworking-testTeam-rhel-7-127.0.0.2-2601-FAIL.log
+Journal extracted to TestNetworking-testTeam-fedora-26-127.0.0.2-2602-FAIL.log</code></pre>
+
+<pre><code># testTeam (check_networking_team.TestNetworking)
+NAME         UUID                                  TYPE            DEVICE
+System eth000  000fb000bd000-000bb000-000ffb-000f000-d000edd000f000e000  000-000-ethernet  eth000
+virbr000       000faf-cb000b-000f000c-000eb000-000fc000a000ff000da  bridge          virbr000
+System eth000  000c000fad000-000ecb-000e000c-eb000d-000a000c000f000c000  000-000-ethernet  --
+File "check-networking-team", line 000, in testTeam
+b.wait_present("#network-interface-slaves tr[data-interface='%s']" % iface000)</code></pre>
+        </section>
+
+        <section>
+            <h2 class="comment">Normalized Compression Distance</h2>
+            <img src="images/ncd.png">
+<pre class="fragment"><code>Z = lambda v: len(zlib.compress(v))</code></pre>
+        </section>
+
+        <section>
+            <h2 class="comment">DBSCAN</h2>
+            <p>Density-based spatial clustering of applications with noise</p>
+            <img src="images/1280px-DBSCAN-Illustration.svg.png">
+        </section>
+
+        <section>
+            <h2 class="comment">k-nearest neighbor</h2>
+            <img src="images/20130502162127782.jpg">
+        </section>
+
+        <section>
+            <h1>I want!</h1>
+        </section>
+
+        <section>
+<pre><code>$ <strong>bots/image-download --state tests-learn-1.gz</strong>
+...
+$ <strong>bots/learn-tests --dry</strong>
+Loading existing tests data
+14208: Items to train
+...
+100933632: Computed distances in 1181 seconds on 32 cores
+332: Clusters (13962 items, 246 noise)
+</code></pre>
+
+<pre><code>$ <strong>cat example-test.log | bots/tests-policy fedora-27</strong>
+...
+...
+# Flake probability: 100.0% (neural network)
+# Flake likely 58.6% (clustering)
+</code></pre>
+        </section>
+
+    </section>
+
+    <section>
+
+        <section>
+            <img src="images/liliana_von_k_8830100398.jpg">
+        </section>
+
+        <section>
+            <h3 class="comment">Add tests to my Fedora/RHEL package</h3>
+            <p><a href="https://fedoraproject.org/wiki/CI/Tests">fedoraproject.org/wiki/CI/Tests</a></p>
+        </section>
+
+        <section>
+            <h3 class="comment">Run simple tests on GitHub pull requests</h3>
+            <p>Add <code>.travis.yml</code> and use Travis CI</p>
+        </section>
+
+        <section>
+            <h3 class="comment">Run a full userland for integration tests</h3>
+            <p>Semaphore CI and <code>example</code><br>
+            <a href="https://github.com/cockpit-project/cockpituous/tree/master/example">github.com/cockpit-project/cockpituous</a></p>
+        </section>
+
+        <section>
+            <h3 class="comment">Run my CI in Openshift</h3>
+            <p>Contact <a href="https://wiki.centos.org/QaWiki/CI">CentOS CI</a> for an account</p>
+        </section>
+
+        <section>
+            <h3 class="comment">Copy pipelines built in Openshift/Jenkins</h3>
+            <p>Continuous Infra team at Red Hat, speaking at DevConf</p>
+        </section>
+
+        <section>
+            <h3 class="comment">Run VMs in Openshift for testing</h3>
+            <p>Look at how <a href="https://github.com/linux-system-roles/test-harness">Linux System Roles</a> did it really simply</p>
+        </section>
+
+        <section>
+            <h3 class="comment">Basic bots for delivery, dist-git, Bodhi, Koji</h3>
+            <p>Look at <code><a href="https://github.com/cockpit-project/cockpituous/tree/master/release">cockpit/release</a></code> container</p>
+        </section>
+
+        <section>
+            <h3 class="comment">Try out Machine Learning</h3>
+            <p>Use <code><a href="http://scikit-learn.org/">scikit-learn</a></code></p>
+        </section>
+
     </section>
 
     <section>
@@ -796,6 +957,7 @@ State not as expected. Possible collision. Aborting.</strong>
         <span class="comment">Credits:</span><br>
         Machines: tt2times on Flickr<br>
         Pear Programming: mendhak on Flickr<br>
+        Shut up and Take my Money: liliana_von_k on Flickr<br>
         Clusters: Chire on Wikipedia<br>
         </p>
     </section>
