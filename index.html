@@ -36,8 +36,24 @@
     </section>
 
     <section>
+        <h1>Cyborg Teams</h1>
+        <p class="comment">A team that is <span class="fragment">part human</span><span class="fragment">,
+            part machine</span></p>
+    </section>
+
+    <section>
         <strong>[We] ate all the low-hanging fruit<br> of modern history ...<br></strong>
         <div style="text-align: right; padding-right: 5em;"><span>&mdash; Tyler Cowen</span></div>
+    </section>
+
+    <section>
+        <strong>Big reasons for stagnation: High complexity<br>of unsolved problems<br></strong>
+        <div style="text-align: right; padding-right: 5em;"><span>&mdash; Zi Shui Dong Liu</span></div>
+    </section>
+
+    <section data-transition="fade-in slide-out">
+        The effort of a solely human team <strong>does not scale</strong><br>
+        past a certain complexity point
     </section>
 
     <section data-background-color="#000"
@@ -46,12 +62,12 @@
     </section>
 
     <section>
-        <strong>You see the computer age everywhere<br>but in the productivity statistics.<br></strong>
-        <div style="text-align: right; padding-right: 5em;"><span>&mdash; Robert Solow</span></div>
+        <h3>"But we use machines!"</h3>
     </section>
 
     <section>
-        <h3>"But we use machines!"</h3>
+        <strong>You see the computer age everywhere<br>but in the productivity statistics.<br></strong>
+        <div style="text-align: right; padding-right: 5em;"><span>&mdash; Robert Solow</span></div>
     </section>
 
     <section data-background-color="#000"
@@ -68,9 +84,6 @@
         <h1>Cyborg Teams</h1>
         <p class="comment">A team that is <span class="fragment">part human</span><span class="fragment">,
             part machine</span></p>
-        <aside class="notes">
-            This is the low hanging fruit.
-        </aside>
     </section>
 
     <section>
@@ -86,6 +99,7 @@
 	<img src="images/logo.png" style="width: 800px">
         <p>a Linux session in a web browser</p>
         <aside class="notes">
+        This is why I've become convinced that this is a thing<br>
         We've had a preview of that future in the Cockpit team
         </aside>
     </section>
@@ -249,17 +263,19 @@
                     <tr>
                         <td>CentOS (7.x, Atomic)
                     </tr><tr>
-                        <td>Fedora (25, 26, 27, Atomic)</td>
+                        <td>Fedora (26, 27, 28, Atomic)</td>
                     </tr><tr>
                         <td>Ubuntu (stable, 16.04)</td>
                     </tr><tr>
-                        <td>RHEL (7.x, 7.4, Extras, Atomic)</td>
+                        <td>RHEL (7.4, 7.5, Extras, Atomic)</td>
                     </tr><tr>
                         <td>Debian (stable, testing)</td>
                     </tr><tr>
                         <td>Openshift</td>
                     </tr><tr>
                         <td>RHEV Hypervisor</td>
+                    </tr><tr>
+                        <td>Cloudforms</td>
                     </tr>
                 </tbody>
             </table>
@@ -268,7 +284,7 @@
         <section data-state="complex">
             <table class="reasons">
                 <thead>
-                    <th>5+ maintained branches</th>
+                    <th>3 maintained branches</th>
                 </thead>
                 <tbody>
                     <tr>
@@ -277,10 +293,6 @@
                         <td>rhel-7.5</td>
                     </tr><tr>
                         <td>rhel-7.4</td>
-                    </tr><tr>
-                        <td>i386</td>
-                    </tr><tr>
-                        <td>ppc64</td>
                     </tr>
                 </tbody>
             </table>
@@ -289,28 +301,32 @@
         <section data-state="complex">
             <table class="reasons">
                 <thead>
-                    <th>3+ browsers</th>
+                    <th>5 browsers</th>
                 </thead>
                 <tbody>
                     <tr>
+                        <td>Firefox</td>
+                    </tr><tr>
                         <td>Google Chrome</td>
                     </tr><tr>
                         <td>Internet Explorer</td>
                     </tr><tr>
-                        <td>Firefox</td>
+                        <td>Safari</td>
+                    </tr><tr>
+                        <td>Edge</td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
         <section data-state="complex" data-transition="slide-in fade-out">
-            <p class="comment">Weekly releases</p>
+            <p class="comment">Release every two weeks</p>
         </section>
     </section>
 
     <section data-background-color="#000" data-transition="fade-in fade-out"
 	    data-background-image="images/explosion-422301_1920.jpg">
-        <h1 class="stand">92 &#215; 15 &#215; 5 &#215; 3 &#215; 50</1>
+        <h1 class="stand">92 &#215; 16 &#215; 5 &#215; 3 &#215; 50</h1>
         <aside class="notes">
         It interacts with XXX different APIs.
         Do the math:
@@ -318,11 +334,6 @@
             10 Linux Operating Systems
             50 stable releases a year
         </aside>
-    </section>
-
-    <section data-transition="fade-in slide-out">
-        The effort of a solely human team <strong>does not scale</strong><br>
-        past a certain complexity point
     </section>
 
     <section>
@@ -349,10 +360,6 @@
                 <i class="fa-li fa fa-repeat"></i>
                 <span>Bots own <strong>mundane work</strong></span>
             </li>
-            <li >
-                <i class="fa-li fa fa-magic"></i>
-                <span>Pair programming with bots</span>
-            </li>
             <li>
                 <i class="fa-li fa fa-user"></i>
                 <span>Humans train the bots</span>
@@ -368,6 +375,10 @@
             <li>
                 <i class="fa-li fa fa-code-fork"></i>
                 <span>Bots as committers</span>
+            </li>
+            <li >
+                <i class="fa-li fa fa-magic"></i>
+                <span>Pair programming with bots</span>
             </li>
             <li>
                 <i class="fa-li fa fa-meh-o"></i>
@@ -439,18 +450,6 @@ $ <strong>zgrep -f '"failure"' tests-train-1.jsonl.gz | wc</strong>
 	* "Christmas"
         -->
         </aside>
-    </section>
-
-    <section>
-        <section>
-            <p class="reasons">
-                <i class="fa fa-magic"></i>
-                <span>Pair programming with bots</span>
-            </p>
-        </section>
-        <section>
-            <img class="border" src="images/cc-mendhak-flikr-3229053685_097ca85dfb_o.jpg">
-        </section>
     </section>
 
     <section>
@@ -548,6 +547,18 @@ $ <strong>zgrep -f '"failure"' tests-train-1.jsonl.gz | wc</strong>
             <img class="border" src="images/github-commit-graph.png">
 <pre><code>$ <strong>git shortlog -ns | head -n10 | cut -c8-30 | nl | grep Cockpit</strong>
      4	Cockpituous</code></pre>
+        </section>
+    </section>
+
+    <section>
+        <section>
+            <p class="reasons">
+                <i class="fa fa-magic"></i>
+                <span>Pair programming with bots</span>
+            </p>
+        </section>
+        <section>
+            <img class="border" src="images/cc-mendhak-flikr-3229053685_097ca85dfb_o.jpg">
         </section>
     </section>
 
@@ -917,17 +928,22 @@ Loading existing tests data
         </section>
 
         <section>
-            <h3 class="comment">Run my CI in Kubernetes</h3>
+            <h3 class="comment">Run my CI in Openshift</h3>
             <p>Contact <a href="https://wiki.centos.org/QaWiki/CI">CentOS CI</a> for an account</p>
         </section>
 
         <section>
-            <h3 class="comment">Run VMs in Containers for testing</h3>
+            <h3 class="comment">Copy pipelines built in Openshift/Jenkins</h3>
+            <p>Continuous Infra team at Red Hat, speaking at DevConf</p>
+        </section>
+
+        <section>
+            <h3 class="comment">Run VMs in Openshift for testing</h3>
             <p>Look at how <a href="https://github.com/linux-system-roles/test-harness">Linux System Roles</a> did it really simply</p>
         </section>
 
         <section>
-            <h3 class="comment">Basic bots for delivery, dist-git, Bodhi, Koji</h3>
+            <h3 class="comment">Bots for delivery, dist-git, Bodhi, Koji</h3>
             <p>Look at <code><a href="https://github.com/cockpit-project/cockpituous/tree/master/release">cockpit/release</a></code> container</p>
         </section>
 
