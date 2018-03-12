@@ -125,9 +125,6 @@
         </section>
     </section>
 
-    <section data-background-image="avatars/layout.png">
-    </section>
-
     <section>
         <section data-state="complex">
             <table class="reasons">
@@ -322,6 +319,9 @@
         <section data-state="complex" data-transition="slide-in fade-out">
             <p class="comment">Release every two weeks</p>
         </section>
+    </section>
+
+    <section data-background-image="avatars/layout.png">
     </section>
 
     <section data-background-color="#000" data-transition="fade-in fade-out"
@@ -615,20 +615,22 @@ $ <strong>zgrep -f '"failure"' tests-train-1.jsonl.gz | wc</strong>
 
     <section>
         <ul class="reasons fa-ul">
+        <!--
             <li>
                 <i class="fa-li fa fa-chain-broken"></i>
                 <span>Don't assume bots can't</span>
             </li>
+        -->
             <li>
-                <i class="fa-li fa fa-recycle"></i>
-                <span>Don't rework process (yet)</span>
+                <i class="fa-li fa fa-code-fork"></i>
+                <span>Make bots and tests reproducible, changeable</span>
             </li>
             <li>
-                <i class="fa-li fa fa-archive"></i>
-                <span>Containerize your bots, yo!</span>
+                <i class="fa-li fa fa-ban"></i>
+                <span>Don't fix process in order to automate it.</span>
             </li>
             <li>
-                <i class="fa-li fa fa-repeat"></i>
+                <i class="fa-li fa fa-cogs"></i>
                 <span>Organic and distributed bots</strong></span>
             </li>
             <li>
@@ -636,55 +638,59 @@ $ <strong>zgrep -f '"failure"' tests-train-1.jsonl.gz | wc</strong>
                 <span>Self-validating and self-aware bots</span>
             </li>
             <li>
-                <i class="fa-li fa fa-cogs"></i>
-                <span>Collision Avoidance and Detection</span>
-            </li>
-            <li>
                 <i class="fa-li fa fa-cutlery comment"></i>
                 <span class="comment">Machine learning: Test flakes are food</span>
+            </li>
+            <li>
+                <i class="fa-li fa fa-thumbs-down"></i>
+                <span>Without tests you do not pass go.</strong></span>
             </li>
         </ul>
     </section>
 
     <section>
-        <p class="reasons">
-            <i class="fa fa-chain-broken"></i>
-            <span>Don't assume bots can't</span>
-        </p>
-        <aside class="notes">
-            It is comparatively easy to make computers exhibit adult level performance on intelligence tests or playing checkers, and difficult or impossible to give them the skills of a one-year-old when it comes to perception and mobility.
-        </aside>
-    </section>
+        <section>
+            <p>Tests should be discoverable, reproducible and
+                contributable by anyone on the team.</p>
+        </section>
 
-    <section>
-        <p class="reasons">
-            <i class="fa fa-recycle"></i>
-            <span>Don't rework process (yet)</span>
-        </p>
-        <aside class="notes">
-        Technique: Don't rework your broken process, automate it
-        </aside>
+        <section>
+            <p>Put bots and tests together with the content<br>
+                they most affect.</p>
+        </section>
+
+        <section>
+            <p>Everyone affected by <br>Continuous Integration<br>
+            <span class="comment">must be able to change it</span><p>
+        </section>
     </section>
 
     <section>
         <section>
             <p class="reasons">
-                <i class="fa fa-archive"></i>
-                <span>Containerize your bots, yo!</span>
+                <i class="fa fa-recycle"></i>
+                <span>Don't fix process in order to automate it.</span>
             </p>
+            <aside class="notes">
+                Technique: Don't rework your broken process, automate it
+            </aside>
         </section>
 
-	<section data-background="images/yo-dawg.png" data-background-position="bottom right"
-		data-background-size='10em'>
-            <!-- TODO: Lay this slide out -->
-            Testing <strong>containers</strong><br>
-            in <strong>Virtual Machines</strong><br>
-            in <strong>container</strong> bots<br>
-            running on <strong>virtual machines</strong><br>
-            <strong class="fragment">on turtles</strong><br>
+        <section>
+            Bots excel at doing shit work<br>
+            Don't feel bad about giving it to them.
         </section>
+
+        <section>
+            <p>Don't assume bots can't</p>
+            <p>See Moravec's Paradox</p>
+            </p>
+            <aside class="notes">
+                It is comparatively easy to make computers exhibit adult level performance on intelligence tests or playing checkers, and difficult or impossible to give them the skills of a one-year-old when it comes to perception and mobility.
+            </aside>
+        </section>
+
     </section>
-
 
     <section>
         <section>
@@ -710,9 +716,17 @@ $ <strong>zgrep -f '"failure"' tests-train-1.jsonl.gz | wc</strong>
         <section>
             <img src="images/06-images.png">
         </section>
-    </section>
 
-    <section>
+	<section data-background="images/yo-dawg.png" data-background-position="bottom right"
+		data-background-size='10em'>
+            <!-- TODO: Lay this slide out -->
+            Testing <strong>containers</strong><br>
+            in <strong>Virtual Machines</strong><br>
+            in <strong>container</strong> bots<br>
+            running on <strong>virtual machines</strong><br>
+            <strong class="fragment">on turtles</strong><br>
+        </section>
+
         <section>
             <p class="reasons">
                 <i class="fa fa-cogs"></i>
