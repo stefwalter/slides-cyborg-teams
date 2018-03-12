@@ -47,7 +47,7 @@
     </section>
 
     <section>
-        <strong>Big reasons for stagnation: High complexity<br>of unsolved problems<br></strong>
+        <strong>Major reason for stagnation: High complexity<br>of unsolved problems<br></strong>
         <div style="text-align: right; padding-right: 5em;"><span>&mdash; Zi Shui Dong Liu</span></div>
     </section>
 
@@ -82,8 +82,8 @@
 
     <section>
         <h1>Cyborg Teams</h1>
-        <p class="comment">A team that is <span class="fragment">part human</span><span class="fragment">,
-            part machine</span></p>
+        <p class="comment">Machines as <span class="fragment">contributors</span><span class="fragment">,
+            not tools</span></p>
     </section>
 
     <section>
@@ -650,26 +650,33 @@ $ <strong>zgrep -f '"failure"' tests-train-1.jsonl.gz | wc</strong>
 
     <section>
         <section>
-            <p>Tests should be discoverable, reproducible and
-                contributable by anyone on the team.</p>
+            <p class="reasons">
+                <i class="fa fa-code-fork"></i>
+                <span>Make bots and tests reproducible, changeable</span>
+            </p>
         </section>
 
         <section>
-            <p>Put bots and tests together with the content<br>
-                they most affect.</p>
+            <p>Bots and tests should be<br> discoverable, reproducible and
+            contributable<br> <strong>by anyone on the team</strong></p>
+        </section>
+
+        <section>
+            <p>Put <strong>bots and tests together with the code</strong><br>
+                or content they most affect.</p>
         </section>
 
         <section>
             <p>Everyone affected by <br>Continuous Integration<br>
-            <span class="comment">must be able to change it</span><p>
+            <strong>must be able to fix it</strong> rapidly<p>
         </section>
     </section>
 
     <section>
         <section>
             <p class="reasons">
-                <i class="fa fa-recycle"></i>
-                <span>Don't fix process in order to automate it.</span>
+                <i class="fa fa-ban"></i>
+                <span>Don't fix process in order to automate it</span>
             </p>
             <aside class="notes">
                 Technique: Don't rework your broken process, automate it
@@ -678,12 +685,12 @@ $ <strong>zgrep -f '"failure"' tests-train-1.jsonl.gz | wc</strong>
 
         <section>
             Bots excel at doing shit work<br>
-            Don't feel bad about giving it to them.
+            Don't feel bad about making them do it
         </section>
 
         <section>
             <p>Don't assume bots can't</p>
-            <p>See Moravec's Paradox</p>
+            <p class="comment">Moravec's Paradox</p>
             </p>
             <aside class="notes">
                 It is comparatively easy to make computers exhibit adult level performance on intelligence tests or playing checkers, and difficult or impossible to give them the skills of a one-year-old when it comes to perception and mobility.
@@ -694,7 +701,7 @@ $ <strong>zgrep -f '"failure"' tests-train-1.jsonl.gz | wc</strong>
 
     <section>
         <section>
-            <p class="reasons"><i class="fa fa-repeat"></i><span>Organic and distributed bots</strong></span></p>
+            <p class="reasons"><i class="fa fa-cogs"></i><span>Organic and distributed bots</strong></span></p>
         </section>
 
         <section>
@@ -728,10 +735,7 @@ $ <strong>zgrep -f '"failure"' tests-train-1.jsonl.gz | wc</strong>
         </section>
 
         <section>
-            <p class="reasons">
-                <i class="fa fa-cogs"></i>
-                <span>Collision avoidance and detection</span>
-            </p>
+            <p>Collision avoidance and detection</p>
         </section>
 
         <section>
@@ -787,6 +791,10 @@ State not as expected. Possible collision. Aborting.</strong>
 
         <section>
             <p>Make your bots try out changes to the bots</p>
+        </section>
+
+        <section>
+            <p>Example: Jenkins Continuous Infra pipeline</p>
         </section>
 
         <section>
@@ -925,9 +933,8 @@ Loading existing tests data
         </section>
 
         <section>
-            <h3 class="comment">Add tests to my Fedora or Debian package</h3>
+            <h3 class="comment">Add tests to my Fedora  package</h3>
             <p><a href="https://fedoraproject.org/wiki/CI/Tests">fedoraproject.org/wiki/CI/Tests</a></p>
-            <p><a href="https://people.debian.org/~mpitt/autopkgtest/README.package-tests.html">people.debian.org/~mpitt/autopkgtest/README.package-tests.html</a></p>
         </section>
 
         <section>
