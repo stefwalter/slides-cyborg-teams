@@ -100,24 +100,45 @@ p.reasons i {
 
 .reveal .redhat-logo {
     position: absolute;
-    display: none;
     bottom: 50px;
     left: 50px;
-    height: 80px;
-    width: 80px;
-    background-image: url('images/redhat.png');
+    height: 34px;
+    width: 105px;
+    background-image: url('images/redhat-name.png');
     background-position: 50% 50%;
     background-size: cover;
     z-index: 2;
 }
 
-html.title .reveal .redhat-logo {
-    display: block;
-}
-
 .reveal .credits {
     margin-top: 2em;
     text-align: left;
-    font-size: 0.75em;
-    font-weight: bold;
+    font-size: 0.5em;
 }
+
+.reveal .questions {
+    text-align: left;
+}
+
+.reveal .questions h1 {
+    margin-bottom: 1em;
+}
+
+.reveal table.contact {
+    background-color: #5c2d91;
+    width: 100%;
+}
+
+.reveal .contact td {
+    font-size: 0.6em;
+    font-weight: bold;
+    border: none;
+    padding: 0.5em;
+    width: 50%;
+}
+
+.reveal .contact img {
+    vertical-align: middle;
+    margin: 0px 15px;
+}
+
