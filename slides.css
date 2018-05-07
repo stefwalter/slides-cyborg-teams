@@ -142,3 +142,24 @@ p.reasons i {
     margin: 0px 15px;
 }
 
+html.overlay .slides {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0;
+    transform: translate(-50%, -50%) !important;
+}
+
+html.overlay .reveal section {
+    top: 83% !important;
+    left: 0px !important;
+    right: 0px !important;
+    bottom: 0px !important;
+    width: 100% !important;
+    color: #000;
+    position: absolute;
+    background-color: #fff;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 0;
+}

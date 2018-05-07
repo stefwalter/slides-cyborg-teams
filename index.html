@@ -95,7 +95,7 @@
     </section>
 
     <section data-state="divider">
-        <h1 class="alt">The Proof</h1>
+        <h1 class="alt">Case Study</h1>
     </section>
 
     <section data-state="clear" data-transition="fade-in fade-out">
@@ -254,7 +254,6 @@
         </section>
 
         <section data-state="complex">
-            <!-- TODO: Add logos -->
             <table class="reasons">
                 <thead>
                     <th>15+ Linuxes and Products</th>
@@ -514,7 +513,6 @@ $ <strong>zgrep -f '"failure"' tests-train-1.jsonl.gz | wc</strong>
             </p>
         </section>
         <section style="text-align: left;">
-            <!-- TODO: Finish this slide -->
             <h2 class="comment">Human signs a tag in git</h2>
             <div class="fragment">
                 <h2 class="comment">Bots scurry about</h2>
@@ -572,6 +570,7 @@ $ <strong>zgrep -f '"failure"' tests-train-1.jsonl.gz | wc</strong>
         </p>
     </section>
 
+
     <section data-state="divider">
         <h1 class="alt">Rules</h1>
     </section>
@@ -597,13 +596,15 @@ $ <strong>zgrep -f '"failure"' tests-train-1.jsonl.gz | wc</strong>
     </section>
 
     <section style="text-align: left;">
-        <!-- TODO Bring in the open source angle -->
         <h2 class="comment">Laws of Cyborg Teams</h2>
         <ol class="listing">
             <li class="fragment">Teaching a machine must be<br>as easy as teaching a human</li>
             <li class="fragment">Machines must produce feedback<br>into the team's workflow</li>
             <li class="fragment">A human should be able to<br>impersonate a machine, and<br>
                 a machine impersonate a human</li>
+            <!--
+TODO: As easy to contribute and reproduce your automation as your software
+            -->
         </ol>
     </section>
 
@@ -617,214 +618,142 @@ $ <strong>zgrep -f '"failure"' tests-train-1.jsonl.gz | wc</strong>
     </section>
 
     <section>
-        <ul class="reasons fa-ul">
-        <!--
-            <li>
-                <i class="fa-li fa fa-chain-broken"></i>
-                <span>Don't assume bots can't</span>
-            </li>
-        -->
-            <li>
-                <i class="fa-li fa fa-code-fork"></i>
-                <span>Make bots and tests reproducible, changeable</span>
-            </li>
-            <li>
-                <i class="fa-li fa fa-ban"></i>
-                <span>Don't fix process in order to automate it.</span>
-            </li>
-            <li>
-                <i class="fa-li fa fa-cogs"></i>
-                <span>Organic and distributed bots</strong></span>
-            </li>
-            <li>
-                <i class="fa-li fa fa-check-circle-o"></i>
-                <span>Self-validating and self-aware bots</span>
-            </li>
-            <li>
-                <i class="fa-li fa fa-cutlery comment"></i>
-                <span class="comment">Machine learning: Test flakes are food</span>
-            </li>
-            <li>
-                <i class="fa-li fa fa-thumbs-down"></i>
-                <span>Without tests you do not pass go.</strong></span>
-            </li>
-        </ul>
-    </section>
-
-    <section>
-        <section>
-            <p class="reasons">
-                <i class="fa fa-code-fork"></i>
-                <span>Make bots and tests reproducible, changeable</span>
-            </p>
-        </section>
-
-        <section>
-            <p>Bots and tests should be<br> discoverable, reproducible and
-            contributable<br> <strong>by anyone on the team</strong></p>
-        </section>
-
-        <section>
-            <p>Put <strong>bots and tests together with the code</strong><br>
-                or content they most affect.</p>
-        </section>
-
-        <section>
-            <p>Everyone affected by <br>Continuous Integration<br>
-            <strong>must be able to fix it</strong> rapidly<p>
-        </section>
-    </section>
-
-    <section>
-        <section>
-            <p class="reasons">
-                <i class="fa fa-ban"></i>
-                <span>Don't fix process in order to automate it</span>
-            </p>
-            <aside class="notes">
-                Technique: Don't rework your broken process, automate it
-            </aside>
-        </section>
-
-        <section>
-            Bots excel at doing shit work<br>
-            Don't feel bad about making them do it
-        </section>
-
-        <section>
+        <i class="fa-li fa fa-chain-broken"></i>
+        <!-- TODO: -->
+        Moravec's Paradox
+        Don't assume bots can't
             <p>Don't assume bots can't</p>
             <p class="comment">Moravec's Paradox</p>
             </p>
             <aside class="notes">
                 It is comparatively easy to make computers exhibit adult level performance on intelligence tests or playing checkers, and difficult or impossible to give them the skills of a one-year-old when it comes to perception and mobility.
             </aside>
-        </section>
-
     </section>
 
-    <section>
-        <section>
-            <p class="reasons"><i class="fa fa-cogs"></i><span>Organic and distributed bots</strong></span></p>
-        </section>
-
-        <section>
-            <img src="images/01-initial.png">
-        </section>
-
-        <section>
-            <img src="images/02-tasks.png">
-        </section>
-
-        <section>
-            <img src="images/03-logs.png">
-        </section>
-
-        <section>
-            <img src="images/04-status.png">
-        </section>
-
-        <section>
-            <img src="images/06-images.png">
-        </section>
-
-	<section data-background="images/yo-dawg.png" data-background-position="bottom right"
-		data-background-size='10em'>
-            <!-- TODO: Lay this slide out -->
-            Testing <strong>containers</strong><br>
-            in <strong>Virtual Machines</strong><br>
-            in <strong>container</strong> bots<br>
-            running on <strong>virtual machines</strong><br>
-            <strong class="fragment">on turtles</strong><br>
-        </section>
-
-        <section>
-            <p>Collision avoidance and detection</p>
-        </section>
-
-        <section>
-<pre><code># Scan for all tests
-bots/tests-scan
-
-# File issues for these tasks
-bots/po-trigger
-bots/image-trigger
-bots/npm-trigger
-bots/naughty-trigger
-
-# Any tasks related to issues
-bots/issue-scan</code></pre>
-        </section>
-
-        <section>
-<pre><code>PRIORITY=0009 bots/image-refresh --issue='7950' debian-testing
-PRIORITY=0009 bots/image-refresh --issue='7949' rhel-7-4
-PRIORITY=0009 bots/image-refresh --issue='7948' ubuntu-1604
-<strong>PRIORITY=0006 TEST_NAME='rhel-7.4-20171024-112020' TEST_REVISION='c9a5bec1d40f881abc011b05dbbe281f32a2c966' bots/tests-invoke 'verify/fedora-i386' 'rhel-7.4'</strong>
-PRIORITY=0006 TEST_NAME='rhel-7.4-20171024-112020' TEST_REVISION='c9a5bec1d40f881abc011b05dbbe281f32a2c966' bots/tests-invoke 'verify/fedora-atomic' 'rhel-7.4'
-PRIORITY=0006 TEST_NAME='rhel-7.4-20171024-112020' TEST_REVISION='c9a5bec1d40f881abc011b05dbbe281f32a2c966' bots/tests-invoke 'verify/centos-7' 'rhel-7.4'
-PRIORITY=0006 TEST_NAME='rhel-7.4-20171024-112020' TEST_REVISION='c9a5bec1d40f881abc011b05dbbe281f32a2c966' bots/tests-invoke 'container/kubernetes' 'rhel-7.4'
-PRIORITY=0005 TEST_NAME='rhel-7.4-20171024-112020' TEST_REVISION='c9a5bec1d40f881abc011b05dbbe281f32a2c966' bots/tests-invoke 'selenium/chrome'
-PRIORITY=0000 touch /tmp/cockpit-image-prune.stamp && bots/image-prune
-...</code></pre>
-        </section>
-
-        <section>
-<pre><code>
-  GEN      dist/ostree/Makefile.deps
-  GEN      dist/networkmanager/Makefile.deps
-  GEN      dist/machines/Makefile.deps
-  GEN      dist/kubernetes/Makefile.deps
-  GEN      dist/kdump/Makefile.deps
-  GEN      dist/docker/Makefile.deps
-  GEN      dist/dashboard/Makefile.deps
-  GEN      dist/apps/Makefile.deps
-<strong>Expecting "WIP: cockpit-tasks-3991c: Update translations from Fedora Zanata" but saw "WIP: cockpit-tasks-xpg09: Update translations from Fedora Zanata"
-State not as expected. Possible collision. Aborting.</strong>
-</code></pre>
-        </section>
+    <section data-state="overlay" data-transition="fade-in none-out"
+        data-background-color="#ffffff">
+        Does your automation self-validate?
     </section>
 
-    <section>
-        <section>
-            <p class="reasons">
-                <i class="fa fa-check-circle-o"></i>
-                <span>Self-validating self-aware bots</span>
-            </p>
+    <!--section-->
+        <section data-state="overlay" data-transition="fade-in none-out"
+            data-background-image="images/5356f82aecad04490a9307a8-960-719.jpg">
+            <div>
+                Automate without reinventing process.<br>
+                Not both at the same time
+            </div>
         </section>
 
-        <section>
-            <p>Make your bots try out changes to the bots</p>
+        <section data-state="overlay" data-transition="none-in fade-out"
+            data-background-image="images/5356f82aecad04490a9307a8-960-719.jpg">
+            <div>
+                Bots excel at doing shit work<br>
+                Don't feel bad about making them do it
+            </div>
+        </section>
+    <!--/section-->
+
+    <!--section-->
+        <section data-state="overlay" data-transition="fade-in fade-out"
+            data-background-image="images/cat-licking-himself.jpg"
+            data-background-color="#fff"
+            data-background-size="50%"
+            data-background-position="top center">
+            <div>
+                Make your bots self-validate<br>
+                They can do the dirty work
+            </div>
+        </section>
+    <!--/section-->
+
+    <!--section-->
+        <section data-state="overlay" data-transition="fade-in fade-out"
+            data-background-image="images/motorcycle-654418.png">
+            <div>
+                If automation is siloed,<br>you’re doing it wrong
+            </div>
         </section>
 
-        <section>
-            <p>Example: Jenkins Continuous Infra pipeline</p>
+        <section data-state="overlay" data-transition="fade-in fade-out"
+            data-background-image="images/motorcycle-654418.png">
+            <div>
+                If your <strong>CI</strong> is someone else's problem<br>you're doing it wrong
+            </div>
         </section>
-
-        <section>
-    <pre><code>    kvm = os.access("/dev/kvm", os.R_OK | os.W_OK)
-
-    try:
-        urllib.urlopen(REDHAT_PING).read()
-        redhat = os.path.exists(os.path.expanduser(REDHAT_CREDS))
-    except IOError:
-        redhat = False
-    </code></pre>
+        <section data-state="overlay" data-transition="fade-in fade-out"
+            data-background-image="images/motorcycle-654418.png">
+            <div>
+                If your <strong>tests</strong> are someone else's problem<br>you're doing it wrong
+            </div>
+        </section>
+        <section data-state="overlay" data-transition="fade-in fade-out"
+            data-background-image="images/motorcycle-654418.png">
+            <div>
+                Everyone affected by Continuous Integration<br>
+                <strong>must be able to fix it</strong> rapidly
+            </div>
+        </section>
+        <section data-state="overlay" data-transition="fade-in fade-out"
+            data-background-image="images/motorcycle-654418.png">
+            <div>
+                Bots and tests should be discoverable, reproducible and<br>
+                contributable <strong>by anyone on the team</strong>
+            </div>
             <aside class="notes">
-                * Not quite true that it doesn't matter where the run
+                <p>Put <strong>bots and tests together with the code</strong><br>
+                    or content they most affect.</p>
             </aside>
         </section>
-    </section>
+    <!--/section-->
+
+    <!--section-->
+        <section data-state="overlay" data-transition="fade-in fade-out"
+            data-background-image="images/Uni.jpg">
+            <div>
+                Don't be afraid of automation<br>
+                that's unique to the team
+            </div>
+        </section>
+        <section data-state="overlay" data-transition="fade-in fade-out"
+            data-background-image="images/Uni.jpg">
+            <div>
+                Autonomous and distributed bots<br>
+                are usually what you'll end up with
+            </div>
+        </section>
+    <!--/section-->
+
+    <!--section-->
+        <section data-state="overlay" data-transition="fade-in fade-out"
+            data-background-image="images/Adaptation.jpg">
+            <div>
+                Can your team iterate on automation<br>faster than deliverables?
+            </div>
+        <!-- Image Credit: Flickr User Newhaircut, via CC -->
+        </section>
+    <!--/section-->
+
+    <!--section-->
+        <section data-state="overlay" data-transition="fade-in fade-out"
+            data-background-image="images/useless-box-1.gif"
+            data-background-color="#fff"
+            data-background-size="70%"
+            data-background-position="top center">
+            <div>
+                Machines own work<br>
+                Not just a tool to help humans with their work
+            </div>
+        </section>
+    <!--/section-->
 
     <section>
-        <section>
-            <p class="reasons">
-                <i class="fa fa-cutlery"></i>
-                <span>Machine learning: Test flakes are food</span>
-            </p>
+        <section data-state="divider">
+            <h1 class="alt">Machine Learning</h1>
         </section>
 
         <section>
-            <h2>Flakes are just fuzzing mutations</h2>
+            <h2>Any sufficiently complete testing system will
+                  be "plagued" by test flakes</h2>
         </section>
 
         <section>
@@ -930,7 +859,6 @@ Loading existing tests data
     </section>
 
     <section>
-
         <section>
             <img src="images/liliana_von_k_8830100398.jpg">
         </section>
@@ -981,6 +909,7 @@ Loading existing tests data
     <section>
         <h1>Cyborg Teams</h1>
         <p class="comment">Happy humans, tired machines</p>
+        <!-- Mindset change: You can train the machines! -->
     </section>
 
     <section data-state="title">
